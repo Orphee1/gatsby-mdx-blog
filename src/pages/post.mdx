@@ -1,0 +1,163 @@
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { RegVideo, Video, Counter, LikeButton } from '../components/Complete'
+
+<section
+className="mdx-page"
+>
+
+## my first mdx file
+
+I'm baby pop-up williamsburg ramps raclette, pitchfork readymade hot chicken kinfolk microdosing asymmetrical normcore PBRB. Selfies pop-up green juice, forage raclette actually four dollar toast meditation mumblecore literally pinterest VHS fanny pack lo-fi. _Freegan four dollar toast cloud bread, gluten-free selvage narwhal godard bicycle rights gentrify. Cred PBRB trust fund tbh kickstarter bushwick._
+
+Banh mi vice mustache mixtape, normcore unicorn ennui. Venmo celiac shabby chic helvetica cornhole chicharrones raclette yuccie crucifix ramps pinterest. Schlitz listicle snackwave food truck kinfolk blog. Lomo salvia church-key prism master cleanse. Literally subway tile mumblecore synth helvetica. Polaroid +1 raw denim roof party.
+
+<div className="code">
+
+```js
+const firstName = 'John'
+const lastName = 'Smith'
+```
+
+</div>
+
+<div className="nice-text">
+
+<h3>Nice text</h3>
+
+<FiInfo className="nice-text-icon"></FiInfo>
+
+I'm baby pop-up williamsburg ramps raclette, pitchfork readymade hot chicken kinfolk microdosing asymmetrical normcore PBRB. Selfies pop-up green juice, forage raclette actually four dollar toast meditation mumblecore literally pinterest VHS fanny pack lo-fi. Freegan four dollar toast cloud bread, gluten-free selvage narwhal godard bicycle rights gentrify. Cred PBRB trust fund tbh kickstarter bushwick.
+
+</div>
+
+<h2> React Components </h2>
+
+<Counter />
+
+```jsx
+import React from 'react'
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton />
+
+<h2>video components</h2>
+
+<RegVideo />
+
+<Video />
+
+<h2>regular heading 2</h2>
+<h2 title>title heading 2</h2>
+<h4>inline code</h4>
+
+`console.log('hello there')`
+
+<h4>blockquote element</h4>
+
+<blockquote display="default">
+  I'm baby pop-up williamsburg ramps raclette, pitchfork readymade hot chicken
+  kinfolk microdosing asymmetrical normcore PBRB.
+</blockquote>
+
+<blockquote display="info">
+  I'm baby pop-up williamsburg ramps raclette, pitchfork readymade hot chicken
+  kinfolk microdosing asymmetrical normcore PBRB.
+</blockquote>
+
+<blockquote display="warning">
+  I'm baby pop-up williamsburg ramps raclette, pitchfork readymade hot chicken
+  kinfolk microdosing asymmetrical normcore PBRB.
+</blockquote>
+
+<blockquote>
+  I'm baby pop-up williamsburg ramps raclette, pitchfork readymade hot chicken
+  kinfolk microdosing asymmetrical normcore PBRB. Selfies pop-up green juice,
+  forage raclette actually four dollar toast meditation mumblecore literally
+  pinterest VHS fanny pack lo-fi. Freegan four dollar toast cloud bread,
+  gluten-free selvage narwhal godard bicycle rights gentrify. Cred PBRB trust
+  fund tbh kickstarter bushwick.
+</blockquote>
+
+#### Javascript
+
+```js
+// comments
+const name = 'john'
+const channel = 'coding addict'
+
+function featuredProducts(data) {
+  return data.filter(item => {
+    return item.featured === true
+  })
+}
+featuredProducts()
+```
+
+#### JSX
+
+```jsx
+import React from 'react'
+
+const Counter = () => {
+  const [count, setCount] = React.useState(0)
+  return (
+    <section className="counter">
+      <h4>show some love to MDX</h4>
+      <h4>likes {count}</h4>
+      <button className="btn btn-danger" onClick={() => setCount(count + 1)}>
+        i like mdx
+      </button>
+    </section>
+  )
+}
+export default Counter
+```
+
+#### HTML
+
+```html
+<h1>hello world</h1>
+<p class="random">random text</p>
+<section class="contact">
+  <div class="title">
+    <h1>contact us</h1>
+  </div>
+</section>
+```
+
+#### CSS
+
+```css
+max-width: 500px;
+border-radius: var(--radius);
+padding: 1rem 1.5rem;
+background: var(--clr-grey-10);
+text-align: center;
+```
+
+<Link to="/posts" className="btn center-btn">
+  all posts
+</Link>
+
+</section>

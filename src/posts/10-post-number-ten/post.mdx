@@ -1,0 +1,74 @@
+---
+title: Gatsby Tutorial
+slug: gatsby-tutorial
+image: ./images/gatsby-1.png
+date: 2020-05-27
+author: Hugo L
+category: gatsby
+readTime: 34
+---
+
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton } from '../../components/Complete'
+
+## my first mdx file
+
+**I'm baby pop-up williamsburg ramps raclette, pitchfork readymade hot chicken kinfolk microdosing asymmetrical normcore PBRB.** Selfies pop-up green juice, forage raclette actually four dollar toast meditation mumblecore literally pinterest VHS fanny pack lo-fi. _Freegan four dollar toast cloud bread, gluten-free selvage narwhal godard bicycle rights gentrify. Cred PBRB trust fund tbh kickstarter bushwick._
+
+Banh mi vice mustache mixtape, normcore unicorn ennui. Venmo celiac shabby chic helvetica cornhole chicharrones raclette yuccie crucifix ramps pinterest. Schlitz listicle snackwave food truck kinfolk blog. Lomo salvia church-key prism master cleanse. Literally subway tile mumblecore synth helvetica. Polaroid +1 raw denim roof party.
+
+<div className="code">
+
+```js
+const firstName = 'John'
+const lastName = 'Smith'
+```
+
+</div>
+
+<div className="nice-text">
+
+<h3>Nice text</h3>
+
+<FiInfo className="nice-text-icon"></FiInfo>
+
+I'm baby pop-up williamsburg ramps raclette, pitchfork readymade hot chicken kinfolk microdosing asymmetrical normcore PBRB. Selfies pop-up green juice, forage raclette actually four dollar toast meditation mumblecore literally pinterest VHS fanny pack lo-fi. Freegan four dollar toast cloud bread, gluten-free selvage narwhal godard bicycle rights gentrify. Cred PBRB trust fund tbh kickstarter bushwick.
+
+</div>
+
+<h2> React Components </h2>
+
+<Counter />
+
+```jsx
+import React from 'react'
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton />
+
+![nice image](./images/gatsby-1.png)
+
+<Link to="/posts" className="btn center-btn">
+  all posts
+</Link>
